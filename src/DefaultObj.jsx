@@ -1,0 +1,43 @@
+const defaultObj = {
+  location: {
+    name: "Seattle",
+    region: "Washington",
+    country: "United States of America",
+    lat: 47.61,
+    lon: -122.33,
+    tz_id: "America/Los_Angeles",
+    localtime_epoch: 1700505372,
+    localtime: "2023-11-20 10:36",
+  },
+  current: {
+    last_updated_epoch: 1700505000,
+    last_updated: "2023-11-20 10:30",
+    temp_c: 6.1,
+    temp_f: 43,
+    is_day: 1,
+    condition: {
+      text: "Partly cloudy",
+      icon: "//cdn.weatherapi.com/weather/64x64/day/116.png",
+      code: 1003,
+    },
+    wind_mph: 3.8,
+    wind_kph: 6.1,
+    wind_degree: 70,
+    wind_dir: "ENE",
+    pressure_mb: 1033,
+    pressure_in: 30.51,
+    precip_mm: 0,
+    precip_in: 0,
+    humidity: 89,
+    cloud: 50,
+    feelslike_c: 5.9,
+    feelslike_f: 42.7,
+    vis_km: 16,
+    vis_miles: 9,
+    uv: 3,
+    gust_mph: 2.7,
+    gust_kph: 4.4,
+  },
+};
+
+export default defaultObj;
