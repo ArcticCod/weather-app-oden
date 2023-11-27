@@ -20,18 +20,18 @@ export default function ForecastDay({ degreeIsCelsius, forecastObject }) {
           <div>{weekday[d.getDay()]}</div>
           {degreeIsCelsius ? (
             <div className="daily-temps">
-              <div>High of&nbsp;{forecastObject.day.avgtemp_c}°&nbsp;C </div>
-              <div>
-                Min:&nbsp;
-                {forecastObject.day.mintemp_c}°&nbsp;C{" "}
-              </div>
-            </div>
-          ) : (
-            <div className="daily-temps">
               <div>High of&nbsp;{forecastObject.day.avgtemp_f}°&nbsp;F </div>
               <div>
                 Min:&nbsp;
                 {forecastObject.day.mintemp_f}°&nbsp;F{" "}
+              </div>
+            </div>
+          ) : (
+            <div className="daily-temps">
+              <div>High of&nbsp;{forecastObject.day.avgtemp_c}°&nbsp;C </div>
+              <div>
+                Min:&nbsp;
+                {forecastObject.day.mintemp_c}°&nbsp;C{" "}
               </div>
             </div>
           )}

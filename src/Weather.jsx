@@ -52,19 +52,19 @@ export default function WeatherApp({ degreeIsCelsius, weatherData }) {
             )}
           </div>
           {degreeIsCelsius ? (
-            <h2>{today && today.temp_c}°&nbsp;C</h2>
-          ) : (
             <h2>{today && today.temp_f}°&nbsp;F</h2>
+          ) : (
+            <h2>{today && today.temp_c}°&nbsp;C</h2>
           )}
         </div>
         <p>{today && today.condition.text}</p>
         {degreeIsCelsius ? (
           <p>
-            Feels Like: <span>{today && today.feelslike_c}°&nbsp;C</span>
+            Feels Like: <span>{today && today.feelslike_f}°&nbsp;F</span>
           </p>
         ) : (
           <p>
-            Feels Like: <span>{today && today.feelslike_f}°&nbsp;F</span>
+            Feels Like: <span>{today && today.feelslike_c}°&nbsp;C</span>
           </p>
         )}
       </div>

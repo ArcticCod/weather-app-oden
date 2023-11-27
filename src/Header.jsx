@@ -9,16 +9,25 @@ function Header({
     <div className="header">
       <h2 className="logo">Weather</h2>
       <div className="search">
-        <input
-          className="search-bar"
-          placeholder="City"
-          value={search}
-          type="text"
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <button className="submit" onClick={() => setCity(search)}>
-          Submit
-        </button>
+        <form className="form" action="">
+          <input
+            className="search-bar"
+            placeholder="City"
+            value={search}
+            type="text"
+            required="required"
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <button
+            className="submit"
+            onClick={(e) => {
+              e.preventDefault();
+              setCity(search);
+            }}
+          >
+            Submit
+          </button>
+        </form>
       </div>
       <div className="settings">
         <button

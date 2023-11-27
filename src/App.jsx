@@ -9,7 +9,7 @@ import defaultObj from "./DefaultObj";
 function App() {
   const [weatherData, setWeatherData] = useState(defaultObj);
   const [degreeIsCelsius, setDegreeIsCelsius] = useState(true);
-  const [city, setCity] = useState("Seattle");
+  const [city, setCity] = useState("Dallas");
   const [search, setSearch] = useState("");
 
   const pngCode = {};
@@ -24,11 +24,14 @@ function App() {
         console.log(res);
         setWeatherData(res);
         pngCode.code = res.current.condition.code;
-        // console.log(pngCode.code);
+        console.log(res);
+      })
+      .catch((error) => {
+        window.alert("Please Select a City");
+        setWeatherData(weatherData);
       });
   }, [city]);
 
-  // console.log(pngCode.code);
   return (
     <>
       <Layout
